@@ -1,0 +1,38 @@
+#################################################
+{% if result.instances != '' %}
+{% for ec2 in result.instances %}
+{% if ec2.tags.Name is defined %}
+TAG_NAME={{ ec2.tags.Name }}
+{% endif %}
+{% if ec2.instance_id is defined %}
+INSTANCE_ID={{ ec2.instance_id }}
+{% endif %}
+{% if ec2.instance_type is defined %}
+INSTANCE_TYPE={{ ec2.instance_type }}
+{% endif %}
+{% if ec2.key_name is defined %}
+KEY_NAME={{ ec2.key_name }}
+{% endif %}
+{% if ec2.state.name is defined %}
+STATUS={{ ec2.state.name }}
+{% endif %}
+{% if ec2.launch_time is defined %}
+CREATE={{ ec2.launch_time }}
+{% endif %}
+{% if ec2.public_ip_address is defined %}
+PUBLIC_IP_ADDRESS={{ ec2.public_ip_address }}
+{% endif %}
+{% if ec2.public_dns_name is defined %}
+PUBLIC_DNS_NAME={{ ec2.public_dns_name }}
+{% endif %}
+{% if ec2.private_dns_name is defined %}
+PRIVATE_DNS_NAME={{ ec2.private_dns_name }}
+{% endif %}
+{% if ec2.private_ip_address is defined %}
+PRIVATE_IP_ADDRESS={{ ec2.private_ip_address }}
+{% endif %}
+##################################################
+##################################################
+{% endfor %}
+{% endif %}
+
