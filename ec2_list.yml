@@ -1,11 +1,11 @@
 ---
-###################################################
+####################################################
 ##Author: Almir Candido                            #
 ##Contact: https://br.linkedin.com/in/almircandido #
 ##                                                 #
 ##Ansible Version: 2.9                             #
 ##                                                 #
-##Requisitos:                                      #
+##Requirements:                                    #
 ##Install:                                         #
 ##python-boto                                      #
 ##python-boto3                                     #
